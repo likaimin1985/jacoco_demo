@@ -55,4 +55,26 @@ public class VideoController {
 
     }
 
+    @RequestMapping("/hello3")
+    public String list3(String num){
+        try {
+            Integer n = Integer.parseInt(num);
+            if (n > 0) {
+                return "整数3";
+            } else if (n == 0) {
+                return "零3";
+            } else {
+                return "负数3";
+            }
+        }catch (Exception e){
+            return "不是数字2";
+        }
+
+    }
+
+
+
+
+
+
 }
