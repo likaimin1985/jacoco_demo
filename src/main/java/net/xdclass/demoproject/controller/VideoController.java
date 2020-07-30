@@ -38,6 +38,21 @@ public class VideoController {
 
     }
 
+    @RequestMapping("/hello2")
+    public String list2(String num){
+        try {
+            Integer n = Integer.parseInt(num);
+            if (n > 0) {
+                return "整数2";
+            } else if (n == 0) {
+                return "零2";
+            } else {
+                return "负数2";
+            }
+        }catch (Exception e){
+            return "不是数字2";
+        }
 
+    }
 
 }
